@@ -1,0 +1,21 @@
+import random 
+
+def roll_dice():
+    return random.randint(1,6)
+
+initial_cash = 0
+rounds = int(input("Enter the number of rounds you want to play: "))
+
+for i in range(rounds):
+    input(f"\nPress Enter to roll the die for Round {i+1}...")
+    result = roll_dice()
+    print(f"You rolled a: {result}")
+
+    if result == 3:
+        print("You won 100 Rs")
+        initial_cash += 100
+    else:
+        print("No cash won this round")
+
+print("\nGame Over") 
+print(f"Total cash won: {initial_cash}") 
